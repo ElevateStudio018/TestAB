@@ -23,48 +23,101 @@
   <a class="skip-link" href="#innehall">Hoppa till innehållet</a>
 
   <!-- ===================== SIDHUVUD ===================== -->
-  <header class="site-header">
+  <header class="site-header" id="sidhuvud">
     <div class="container site-header__inner">
       <a class="wordmark" href="#start" aria-label="Aqnova AB – till startsidan">
-        Aqnova<span class="wordmark__suffix">AB</span>
+        <span class="wordmark__mark" aria-hidden="true">A</span>
+        <span>Aqnova<span class="wordmark__suffix"> AB</span></span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="huvudmeny">
-        <span class="nav-toggle__bars" aria-hidden="true"></span>
-        Meny
-      </button>
+      <div class="site-header__actions">
+        <!-- Snabblänkar i listen på bredare skärmar. Hela menyn finns i menypanelen nedan. -->
+        <nav class="quick-nav" aria-label="Snabblänkar">
+          <ul>
+            <li><a href="#om">Om oss</a></li>
+            <li><a href="#tjanster">Tjänster</a></li>
+            <li><a href="#foretagsinformation">Företagsinformation</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
 
-      <nav class="site-nav" id="huvudmeny" aria-label="Huvudmeny">
-        <ul>
-          <li><a href="#om">Om oss</a></li>
-          <li><a href="#verksamhet">Verksamhet</a></li>
-          <li><a href="#tjanster">Tjänster</a></li>
-          <li><a href="#kompetens">Kompetens</a></li>
-          <li><a href="#projekt">Projekt</a></li>
-          <li><a href="#foretagsinformation">Företagsinformation</a></li>
-          <li><a href="#faq">Frågor och svar</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-      </nav>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="huvudmeny">
+          <span class="menu-button__label">Meny</span>
+          <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
     </div>
   </header>
+
+  <!-- ===================== MENYPANEL =====================
+       Lägg till en menypunkt genom att kopiera ett <li> och ändra nummer, länk, rubrik och beskrivning. -->
+  <div class="menu" id="huvudmeny" role="dialog" aria-modal="true" aria-label="Meny" hidden>
+    <nav class="menu__body" aria-label="Huvudmeny">
+      <div class="container">
+        <ol class="menu__list">
+          <li><a href="#start"><span class="menu__num">01</span><span class="menu__text"><span class="menu__title">Start</span><span class="menu__desc">Aqnova AB i korthet</span></span></a></li>
+          <li><a href="#om"><span class="menu__num">02</span><span class="menu__text"><span class="menu__title">Om oss</span><span class="menu__desc">Företaget och verksamheten</span></span></a></li>
+          <li><a href="#verksamhet"><span class="menu__num">03</span><span class="menu__text"><span class="menu__title">Verksamhet</span><span class="menu__desc">Datakonsultverksamhet</span></span></a></li>
+          <li><a href="#tjanster"><span class="menu__num">04</span><span class="menu__text"><span class="menu__title">Tjänster</span><span class="menu__desc">Tjänster och personal</span></span></a></li>
+          <li><a href="#kompetens"><span class="menu__num">05</span><span class="menu__text"><span class="menu__title">Kompetens</span><span class="menu__desc">Verksamhetsområden</span></span></a></li>
+          <li><a href="#projekt"><span class="menu__num">06</span><span class="menu__text"><span class="menu__title">Projekt</span><span class="menu__desc">Projekt och referenser</span></span></a></li>
+          <li><a href="#foretagsinformation"><span class="menu__num">07</span><span class="menu__text"><span class="menu__title">Företagsinformation</span><span class="menu__desc">Registrerade uppgifter</span></span></a></li>
+          <li><a href="#faq"><span class="menu__num">08</span><span class="menu__text"><span class="menu__title">Frågor och svar</span><span class="menu__desc">Vanliga frågor</span></span></a></li>
+          <li><a href="#kontakt"><span class="menu__num">09</span><span class="menu__text"><span class="menu__title">Kontakt</span><span class="menu__desc">Adress och uppgifter</span></span></a></li>
+        </ol>
+      </div>
+    </nav>
+    <div class="menu__foot">
+      <div class="container menu__foot-inner">
+        <address>Aqnova AB · S Persgatan 39 F, 753 29 Uppsala</address>
+        <span>Org.nr 559214-7648</span>
+      </div>
+    </div>
+  </div>
 
   <main id="innehall">
 
     <!-- ===================== A. STARTSIDA ===================== -->
     <section class="hero" id="start" aria-labelledby="start-rubrik">
-      <div class="container">
-        <span class="tag">Datakonsultverksamhet · Uppsala</span>
-        <h1 id="start-rubrik">Aqnova AB</h1>
-        <p class="lead">
+      <!-- Dekorativ bakgrund: ett abstrakt nätverk av punkter och linjer. -->
+      <svg class="hero__art" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+        <g class="hero__lines">
+          <path d="M120 140 L300 90 L470 180 L520 360 L390 500 L200 470 L90 330 Z" />
+          <path d="M300 90 L300 290 L470 180 M300 290 L520 360 M300 290 L390 500 M300 290 L200 470 M300 290 L90 330 M300 290 L120 140" />
+          <path d="M200 470 L390 500 M90 330 L200 470" />
+        </g>
+        <g class="hero__nodes">
+          <circle cx="120" cy="140" r="5" /><circle cx="300" cy="90" r="5" /><circle cx="470" cy="180" r="5" />
+          <circle cx="520" cy="360" r="5" /><circle cx="390" cy="500" r="5" /><circle cx="200" cy="470" r="5" />
+          <circle cx="90" cy="330" r="5" />
+          <circle class="hero__core" cx="300" cy="290" r="9" />
+        </g>
+      </svg>
+
+      <div class="container hero__inner">
+        <p class="tag hero__rise" style="--d: 100ms">Aqnova AB · Uppsala</p>
+        <h1 class="hero__title hero__rise" id="start-rubrik" style="--d: 220ms">
+          Aqnova AB
+          <span class="hero__subtitle">Datakonsultverksamhet i Uppsala</span>
+        </h1>
+        <p class="lead hero__lead hero__rise" style="--d: 340ms">
           Aqnova AB är ett svenskt aktiebolag med säte i Uppsala. Bolaget registrerades
           2019 och är verksamt inom datakonsultverksamhet, med inriktning på att erbjuda
           tjänster och personal inom området.
         </p>
-        <div class="button-row">
-          <a class="button button--on-primary" href="#om">Om Aqnova AB</a>
+        <div class="button-row hero__rise" style="--d: 460ms">
+          <a class="button button--on-primary" href="#om">Om Aqnova AB <span aria-hidden="true">›</span></a>
           <a class="button button--ghost-on-primary" href="#kontakt">Kontakt</a>
         </div>
+      </div>
+
+      <div class="hero__facts hero__rise" style="--d: 600ms">
+        <ul class="container">
+          <li><span>Bolagsform</span>Aktiebolag</li>
+          <li><span>Säte</span>Uppsala</li>
+          <li><span>Registrerat</span>2019</li>
+          <li><span>Skatt</span>Godkänd för F-skatt</li>
+        </ul>
       </div>
     </section>
 
