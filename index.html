@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aqnova AB – Datakonsultverksamhet i Uppsala</title>
+  <meta name="description" content="Aqnova AB är ett svenskt aktiebolag med säte i Uppsala, registrerat inom datakonsultverksamhet. Organisationsnummer 559214-7648.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!--
+    REDIGERINGSGUIDE
+    - All text ligger direkt i den här filen, sektion för sektion.
+    - Varje sektion har ett id (t.ex. id="tjanster") som menyn länkar till.
+    - Mallar för tjänster, kompetenser, projekt och kontaktuppgifter finns i
+      <template>-elementen längst ned i filen. Mallar visas aldrig för besökare.
+    - Se README.md för fler instruktioner.
+  -->
+  <a class="skip-link" href="#innehall">Hoppa till innehållet</a>
+
+  <!-- ===================== SIDHUVUD ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="wordmark" href="#start" aria-label="Aqnova AB – till startsidan">
+        Aqnova<span class="wordmark__suffix">AB</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="huvudmeny">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        Meny
+      </button>
+
+      <nav class="site-nav" id="huvudmeny" aria-label="Huvudmeny">
+        <ul>
+          <li><a href="#om">Om oss</a></li>
+          <li><a href="#verksamhet">Verksamhet</a></li>
+          <li><a href="#tjanster">Tjänster</a></li>
+          <li><a href="#kompetens">Kompetens</a></li>
+          <li><a href="#projekt">Projekt</a></li>
+          <li><a href="#foretagsinformation">Företagsinformation</a></li>
+          <li><a href="#faq">Frågor och svar</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="innehall">
+
+    <!-- ===================== A. STARTSIDA ===================== -->
+    <section class="hero" id="start" aria-labelledby="start-rubrik">
+      <div class="container">
+        <span class="tag">Datakonsultverksamhet · Uppsala</span>
+        <h1 id="start-rubrik">Aqnova AB</h1>
+        <p class="lead">
+          Aqnova AB är ett svenskt aktiebolag med säte i Uppsala. Bolaget registrerades
+          2019 och är verksamt inom datakonsultverksamhet, med inriktning på att erbjuda
+          tjänster och personal inom området.
+        </p>
+        <div class="button-row">
+          <a class="button button--on-primary" href="#om">Om Aqnova AB</a>
+          <a class="button button--ghost-on-primary" href="#kontakt">Kontakt</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Översikt: de uppgifter som är kända om bolaget -->
+    <section class="section" aria-labelledby="oversikt-rubrik">
+      <div class="container">
+        <div class="section__intro">
+          <h2 class="section-heading" id="oversikt-rubrik">Aqnova AB i korthet</h2>
+        </div>
+        <div class="section__body">
+          <dl class="overview">
+            <div><dt>Verksamhet</dt><dd>Datakonsultverksamhet</dd></div>
+            <div><dt>Bolagsform</dt><dd>Aktiebolag</dd></div>
+            <div><dt>Registrerat</dt><dd>2019</dd></div>
+            <div><dt>Säte</dt><dd>Uppsala</dd></div>
+            <div><dt>Organisationsnummer</dt><dd>559214-7648</dd></div>
+            <div><dt>F-skatt</dt><dd>Godkänd för F-skatt</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== B. OM AQNOVA AB ===================== -->
+    <section class="section section--surface" id="om" aria-labelledby="om-rubrik">
+      <div class="container two-col">
+        <div class="prose">
+          <span class="tag">Om företaget</span>
+          <h2 class="section-heading" id="om-rubrik">Om Aqnova AB</h2>
+          <div class="section__body">
+            <p class="lead">
+              Aqnova AB är ett aktiebolag med säte i Uppsala som bedriver
+              datakonsultverksamhet.
+            </p>
+            <p>
+              Bolaget registrerades den 13 augusti 2019 och är aktivt enligt
+              företagsregistret. Verksamheten är registrerad under SNI-kod 62201,
+              datakonsultverksamhet.
+            </p>
+            <p>
+              Enligt den registrerade verksamhetsbeskrivningen ska företaget erbjuda
+              tjänster och personal inom datakonsultverksamhet.
+            </p>
+            <p>
+              Aqnova AB är registrerat för F-skatt och för moms. Bolagets adress är
+              S Persgatan 39 F, 753 29 Uppsala.
+            </p>
+            <!-- Plats för kompletterande text om bolaget, t.ex. historik eller inriktning,
+                 när sådan information har bekräftats av företaget. -->
+          </div>
+        </div>
+
+        <aside class="fact-box" aria-labelledby="om-fakta-rubrik">
+          <h3 id="om-fakta-rubrik">Fakta om bolaget</h3>
+          <dl>
+            <div><dt>Företagsnamn:</dt><dd>Aqnova AB</dd></div>
+            <div><dt>Bolagsform:</dt><dd>Aktiebolag</dd></div>
+            <div><dt>Registrerat:</dt><dd>2019</dd></div>
+            <div><dt>Säte:</dt><dd>Uppsala</dd></div>
+            <div><dt>Adress:</dt><dd>S Persgatan 39 F, 753 29 Uppsala</dd></div>
+            <div><dt>Verksamhet:</dt><dd>Tjänster och personal inom datakonsultverksamhet</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== VERKSAMHETSOMRÅDE ===================== -->
+    <section class="section" id="verksamhet" aria-labelledby="verksamhet-rubrik">
+      <div class="container">
+        <div class="section__intro">
+          <span class="tag">Verksamhetsområde</span>
+          <h2 class="section-heading" id="verksamhet-rubrik">Datakonsultverksamhet</h2>
+          <p class="lead">
+            Aqnova AB är registrerat inom datakonsultverksamhet (SNI 62201).
+          </p>
+        </div>
+        <div class="section__body cards">
+          <article class="card">
+            <h3>Registrerad verksamhet</h3>
+            <p>
+              Företaget ska erbjuda tjänster och personal inom datakonsultverksamhet.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Branschklassificering</h3>
+            <p>
+              Verksamheten är klassificerad under SNI-kod 62201,
+              datakonsultverksamhet.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Verksamhetsort</h3>
+            <p>
+              Bolaget har sitt säte i Uppsala med adress S Persgatan 39 F.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== C. TJÄNSTER ===================== -->
+    <section class="section section--surface" id="tjanster" aria-labelledby="tjanster-rubrik">
+      <div class="container">
+        <div class="section__intro">
+          <span class="tag">Tjänster</span>
+          <h2 class="section-heading" id="tjanster-rubrik">Tjänster inom datakonsultverksamhet</h2>
+          <p class="lead">
+            Enligt den registrerade verksamhetsbeskrivningen ska Aqnova AB erbjuda
+            tjänster och personal inom datakonsultverksamhet.
+          </p>
+        </div>
+
+        <!--
+          TJÄNSTELISTA
+          Lägg till en tjänst genom att kopiera mallen "mall-tjanst" längst ned i filen
+          och klistra in den här inne. Ta sedan bort attributet hidden på raden nedan.
+          Publicera bara tjänster som företaget har bekräftat.
+        -->
+        <div class="section__body cards" id="tjanstelista" hidden>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ARBETSSÄTT (endast bekräftade uppgifter) ===================== -->
+    <section class="section" id="arbetssatt" aria-labelledby="arbetssatt-rubrik">
+      <div class="container">
+        <div class="section__intro">
+          <span class="tag">Arbetssätt</span>
+          <h2 class="section-heading" id="arbetssatt-rubrik">Uppdragsform</h2>
+          <p class="lead">
+            Aqnova AB är ett aktiebolag som är registrerat för F-skatt och moms.
+          </p>
+        </div>
+        <div class="section__body cards">
+          <article class="card">
+            <h3>Aktiebolag</h3>
+            <p>Aqnova AB är ett aktivt aktiebolag, registrerat den 13 augusti 2019.</p>
+          </article>
+          <article class="card">
+            <h3>Godkänd för F-skatt</h3>
+            <p>Bolaget är registrerat för F-skatt.</p>
+          </article>
+          <article class="card">
+            <h3>Momsregistrerat</h3>
+            <p>Momsregistreringsnummer SE559214764801.</p>
+          </article>
+        </div>
+        <!--
+          ARBETSPROCESS
+          Här kan en beskrivning av företagets arbetsprocess läggas till, t.ex. steg från
+          förfrågan till leverans, när företaget har bekräftat hur uppdrag genomförs.
+          Använd gärna samma kortlayout som ovan (div.cards med article.card).
+        -->
+      </div>
+    </section>
+
+    <!-- ===================== D. KOMPETENS OCH VERKSAMHETSOMRÅDEN ===================== -->
+    <section class="section section--surface" id="kompetens" aria-labelledby="kompetens-rubrik">
+      <div class="container">
+        <div class="section__intro">
+          <span class="tag">Kompetens</span>
+          <h2 class="section-heading" id="kompetens-rubrik">Kompetens och verksamhetsområden</h2>
+          <p class="lead">
+            Aqnova AB:s verksamhet är inriktad på datakonsultverksamhet, där bolaget
+            enligt sin registrerade verksamhet ska erbjuda såväl tjänster som personal.
+          </p>
+        </div>
+
+        <!--
+          KOMPETENSOMRÅDEN
+          Struktur för: Teknisk kompetens, Specialiseringar, System och plattformar,
+          Metoder och arbetsprocesser, Konsultkompetenser.
+          Kopiera mallen "mall-kompetens" längst ned i filen hit och ta bort hidden nedan.
+          Ange bara tekniker, plattformar och certifieringar som företaget har bekräftat.
+        -->
+        <div class="section__body cards" id="kompetenslista" hidden>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== E. PROJEKT OCH REFERENSER ===================== -->
+    <section class="section" id="projekt" aria-labelledby="projekt-rubrik">
+      <div class="container">
+        <div class="section__intro">
+          <span class="tag">Projekt</span>
+          <h2 class="section-heading" id="projekt-rubrik">Projekt och referenser</h2>
+          <p class="lead">
+            Projektbeskrivningar och kundreferenser publiceras här i den mån
+            uppdragsgivarna har godkänt publicering.
+          </p>
+        </div>
+
+        <!--
+          PROJEKTLISTA
+          Varje projekt kan innehålla: projektnamn, kund (om publicering är godkänd),
+          bakgrund, utmaning, lösning, tekniker, resultat och projektperiod.
+          Kopiera mallen "mall-projekt" längst ned i filen hit och ta bort hidden nedan.
+        -->
+        <div class="section__body cards" id="projektlista" hidden>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== F. FÖRETAGSINFORMATION ===================== -->
+    <section class="section section--surface" id="foretagsinformation" aria-labelledby="info-rubrik">
+      <div class="container">
+        <div class="section__intro">
+          <span class="tag">Företagsinformation</span>
+          <h2 class="section-heading" id="info-rubrik">Företagsuppgifter</h2>
+        </div>
+        <div class="section__body">
+          <table class="fact-table">
+            <caption>Registrerade uppgifter om Aqnova AB</caption>
+            <tbody>
+              <tr><th scope="row">Företagsnamn</th><td>Aqnova AB</td></tr>
+              <tr><th scope="row">Organisationsnummer</th><td>559214-7648</td></tr>
+              <tr><th scope="row">Bolagsform</th><td>Aktiebolag</td></tr>
+              <tr><th scope="row">Status</th><td>Aktivt enligt företagsregister</td></tr>
+              <tr><th scope="row">Registreringsdatum</th><td>13 augusti 2019</td></tr>
+              <tr><th scope="row">Säte</th><td>Uppsala</td></tr>
+              <tr><th scope="row">Adress</th><td>S Persgatan 39 F, 753 29 Uppsala</td></tr>
+              <tr><th scope="row">Verksamhet</th><td>Datakonsultverksamhet</td></tr>
+              <tr><th scope="row">SNI-kod</th><td>62201</td></tr>
+              <tr><th scope="row">F-skatt</th><td>Registrerad för F-skatt</td></tr>
+              <tr><th scope="row">Moms</th><td>Momsregistrerad, SE559214764801</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== H. FRÅGOR OCH SVAR ===================== -->
+    <section class="section" id="faq" aria-labelledby="faq-rubrik">
+      <div class="container">
+        <div class="section__intro">
+          <span class="tag">Frågor och svar</span>
+          <h2 class="section-heading" id="faq-rubrik">Vanliga frågor</h2>
+        </div>
+        <div class="section__body faq">
+          <details>
+            <summary>Vad är Aqnova AB?</summary>
+            <div class="faq__answer">
+              <p>
+                Aqnova AB är ett svenskt aktiebolag med säte i Uppsala. Bolaget
+                registrerades 2019 och är verksamt inom datakonsultverksamhet.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>Var är Aqnova AB registrerat?</summary>
+            <div class="faq__answer">
+              <p>
+                Aqnova AB har sitt säte i Uppsala och adressen
+                S Persgatan 39 F, 753 29 Uppsala. Bolaget registrerades den
+                13 augusti 2019.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>Vilket verksamhetsområde är företaget registrerat inom?</summary>
+            <div class="faq__answer">
+              <p>
+                Aqnova AB är registrerat inom datakonsultverksamhet, SNI-kod 62201.
+                Enligt den registrerade verksamhetsbeskrivningen ska företaget erbjuda
+                tjänster och personal inom datakonsultverksamhet.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>Vad är Aqnova AB:s organisationsnummer?</summary>
+            <div class="faq__answer">
+              <p>Organisationsnumret är 559214-7648.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Är Aqnova AB registrerat för F-skatt och moms?</summary>
+            <div class="faq__answer">
+              <p>
+                Ja. Bolaget är registrerat för F-skatt och för moms med
+                momsregistreringsnummer SE559214764801.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>Hur kontaktar man Aqnova AB?</summary>
+            <div class="faq__answer">
+              <p>
+                Aqnova AB nås via post på adressen S Persgatan 39 F, 753 29 Uppsala.
+                Se även avsnittet <a href="#kontakt">Kontakt</a>.
+              </p>
+              <!-- Uppdatera svaret när verifierad e-postadress och telefonnummer finns. -->
+            </div>
+          </details>
+          <!--
+            Lägg till fler frågor genom att kopiera ett <details>-block ovan.
+            Frågor om specifika tjänster, kunder eller kompetenser bör läggas till först
+            när svaren har bekräftats av företaget.
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== G. KONTAKT ===================== -->
+    <section class="section section--primary" id="kontakt" aria-labelledby="kontakt-rubrik">
+      <div class="container two-col">
+        <div>
+          <h2 class="section-heading" id="kontakt-rubrik">Kontakt</h2>
+          <div class="section__body">
+            <address class="address">
+              <strong>Aqnova AB</strong><br>
+              S Persgatan 39 F<br>
+              753 29 Uppsala<br>
+              Sverige
+            </address>
+            <dl class="contact-list" id="kontaktuppgifter">
+              <div>
+                <dt>Organisationsnummer</dt>
+                <dd>559214-7648</dd>
+              </div>
+              <!--
+                E-POST OCH TELEFON
+                Lägg till verifierade uppgifter här, t.ex.:
+                <div>
+                  <dt>E-post</dt>
+                  <dd><a href="mailto:ADRESS">ADRESS</a></dd>
+                </div>
+                <div>
+                  <dt>Telefon</dt>
+                  <dd><a href="tel:+46NUMMER">NUMMER</a></dd>
+                </div>
+              -->
+            </dl>
+          </div>
+        </div>
+        <div>
+          <!--
+            KONTAKTFORMULÄR
+            Plats för ett kontaktformulär. Se mallen "mall-kontaktformular" längst ned i
+            filen. Formuläret behöver en mottagare (t.ex. en formulärtjänst eller server)
+            innan det kan publiceras.
+          -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== SIDFOT ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h2>Aqnova AB</h2>
+          <address>
+            S Persgatan 39 F<br>
+            753 29 Uppsala<br>
+            Sverige
+          </address>
+        </div>
+        <div>
+          <h2>Företagsuppgifter</h2>
+          <ul>
+            <li>Org.nr 559214-7648</li>
+            <li>Momsreg.nr SE559214764801</li>
+            <li>Godkänd för F-skatt</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Innehåll</h2>
+          <ul>
+            <li><a href="#om">Om Aqnova AB</a></li>
+            <li><a href="#tjanster">Tjänster</a></li>
+            <li><a href="#foretagsinformation">Företagsinformation</a></li>
+            <li><a href="#faq">Frågor och svar</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="site-footer__bottom">© Aqnova AB</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MALLAR – visas aldrig för besökare.
+       Kopiera innehållet i en mall till rätt lista ovan och ersätt texterna.
+       ========================================================================== -->
+
+  <!-- Tjänst: kopiera <article> till #tjanstelista -->
+  <template id="mall-tjanst">
+    <article class="card">
+      <h3>Tjänstens namn</h3>
+      <p>Kort beskrivning av tjänsten.</p>
+      <dl>
+        <dt>Kundens behov</dt>
+        <dd>Vilket behov tjänsten möter.</dd>
+        <dt>Leverans och genomförande</dt>
+        <dd>Hur uppdraget genomförs och levereras.</dd>
+        <dt>Tekniker och kompetenser</dt>
+        <dd>Bekräftade tekniker och kompetenser.</dd>
+        <dt>Förväntad nytta</dt>
+        <dd>Vad kunden får ut av tjänsten.</dd>
+        <dt>Relevanta projekt</dt>
+        <dd><a href="#projekt">Länk till projekt</a></dd>
+      </dl>
+    </article>
+  </template>
+
+  <!-- Kompetensområde: kopiera <article> till #kompetenslista.
+       Förslag på rubriker: Teknisk kompetens, Specialiseringar, System och plattformar,
+       Metoder och arbetsprocesser, Konsultkompetenser. -->
+  <template id="mall-kompetens">
+    <article class="card">
+      <h3>Kompetensområde</h3>
+      <p>Beskrivning av kompetensområdet.</p>
+      <dl>
+        <dt>Exempel</dt>
+        <dd>Bekräftade tekniker, system, metoder eller certifieringar.</dd>
+      </dl>
+    </article>
+  </template>
+
+  <!-- Projekt: kopiera <article> till #projektlista -->
+  <template id="mall-projekt">
+    <article class="card">
+      <h3>Projektnamn</h3>
+      <dl>
+        <dt>Kund</dt>
+        <dd>Kundens namn (endast om publicering är godkänd).</dd>
+        <dt>Projektperiod</dt>
+        <dd>ÅÅÅÅ–ÅÅÅÅ</dd>
+        <dt>Bakgrund</dt>
+        <dd>Projektets bakgrund.</dd>
+        <dt>Utmaning</dt>
+        <dd>Vad som behövde lösas.</dd>
+        <dt>Lösning</dt>
+        <dd>Hur det löstes.</dd>
+        <dt>Tekniker</dt>
+        <dd>Tekniker som användes.</dd>
+        <dt>Resultat</dt>
+        <dd>Vad projektet ledde till.</dd>
+      </dl>
+    </article>
+  </template>
+
+  <!-- Kontaktformulär: kopiera <form> till kontaktsektionen och ange en riktig action -->
+  <template id="mall-kontaktformular">
+    <form class="contact-form" action="FORMULARMOTTAGARE" method="post">
+      <label>Namn<br><input type="text" name="namn" required autocomplete="name"></label>
+      <label>E-post<br><input type="email" name="epost" required autocomplete="email"></label>
+      <label>Meddelande<br><textarea name="meddelande" rows="5" required></textarea></label>
+      <button class="button button--on-primary" type="submit">Skicka</button>
+    </form>
+  </template>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
