@@ -799,6 +799,166 @@ h3 {
   }
 }
 
+/* ---------- Bilder ---------- */
+
+/* En bild med en förskjuten accentram bakom, i Stenvallers anda. Bilden zoomar in lätt vid hovring. */
+.photo {
+  position: relative;
+  margin: 0;
+  isolation: isolate;
+}
+
+.photo::before {
+  content: "";
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  z-index: -1;
+  border: 2px solid var(--c-accent);
+  opacity: 0.5;
+}
+
+.photo picture {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--c-primary);
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.photo:hover img {
+  transform: scale(1.04);
+}
+
+.photo--on-primary::before {
+  border-color: var(--c-on-primary);
+  opacity: 0.35;
+}
+
+/* Mindre förskjutning på smala skärmar, så ramen inte hamnar utanför sidan. */
+@media (max-width: 639px) {
+  .photo::before {
+    inset: 10px -8px -10px 8px;
+  }
+}
+
+/* Text och bild sida vid sida. */
+.split {
+  display: grid;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 72px;
+  }
+
+  .split--reverse > .photo {
+    order: -1;
+  }
+}
+
+/* Bild och faktaruta staplade i högerkolumnen under "Om Aqnova AB". */
+.stack {
+  display: grid;
+  gap: 40px;
+}
+
+/* Bildband över hela bredden med ett kort citat. */
+.photo-band {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  overflow: hidden;
+  color: var(--c-on-primary);
+  background: var(--c-secondary);
+}
+
+@media (min-width: 1024px) {
+  .photo-band {
+    min-height: 480px;
+  }
+}
+
+.photo-band__media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.photo-band__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgb(12 26 51 / 0.78);
+}
+
+@media (min-width: 900px) {
+  .photo-band::after {
+    background: linear-gradient(90deg, rgb(12 26 51 / 0.92) 0%, rgb(20 40 75 / 0.7) 50%, rgb(20 40 75 / 0.35) 100%);
+  }
+}
+
+.photo-band__inner {
+  padding-block: 72px;
+}
+
+.photo-band .tag {
+  color: rgb(255 255 255 / 0.75);
+}
+
+.photo-band__quote {
+  max-width: 16em;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+@media (min-width: 1024px) {
+  .photo-band__quote {
+    font-size: 52px;
+  }
+}
+
+/* Bildbandet glider långsamt när det passerar, där webbläsaren stöder scrollstyrda animationer. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .photo-band__media img {
+      scale: 1.12;
+      animation: band-drift linear both;
+      animation-timeline: view();
+    }
+  }
+}
+
+@keyframes band-drift {
+  from {
+    translate: 0 -5%;
+  }
+  to {
+    translate: 0 5%;
+  }
+}
+
 /* ---------- Översikt (snabbfakta) ---------- */
 
 .overview {
@@ -885,6 +1045,15 @@ h3 {
 
 .fact-box dd {
   margin: 0;
+  hyphens: auto;
+}
+
+/* På smala skärmar hamnar etikett och värde under varandra. */
+@media (max-width: 479px) {
+  .fact-box dl > div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
 }
 
 /* ---------- Faktatabell (företagsinformation) ---------- */
