@@ -12,7 +12,7 @@ formspråk är hämtade från Stenvallers webbplats.
 | `assets/js/main.js` | Mobilmenyn |
 | `assets/img/logo.png` | Logotypen (i sidhuvudet och sidfoten) |
 | `assets/img/favicon-32.png`, `favicon-180.png` | Ikon i webbläsarfliken och för hemskärmen |
-| `assets/img/om-*`, `band-*`, `tjanster-*`, `kompetens-*`, `projekt-*`, `kontakt-*` | Bilder i sektionerna, som WebP och JPEG |
+| `assets/img/om-*`, `band-*`, `tjanster-*`, `kompetens-*`, `projekt-*` | Bilder i sektionerna, som WebP och JPEG |
 | `assets/img/hero-kod-*` | Hero-bakgrunden: 1000 och 2000 px samt en stående mobilversion, som WebP och JPEG |
 
 Öppna `index.html` direkt i en webbläsare, eller publicera mappen på valfritt webbhotell
@@ -66,7 +66,5 @@ säger inget om vilka tekniker företaget arbetar med. Ingen bild visar igenkän
 | Tjänster | `tjanster-programmering-*` | [pexels.com/photo/574071](https://www.pexels.com/photo/person-encoding-in-laptop-574071/) |
 | Kompetens | `kompetens-kod-*` | César Gaviria, [pexels.com/photo/36571389](https://www.pexels.com/photo/html-code-on-computer-screen-in-dark-mode-36571389/) |
 | Projekt | `projekt-dashboard-*` | [pexels.com/photo/577210](https://www.pexels.com/photo/close-up-photo-of-gray-laptop-577210/) |
-| Kontakt | `kontakt-uppsala-*` | [pexels.com/photo/17241571](https://www.pexels.com/photo/street-in-uppsala-in-sweden-17241571/) |
 
 Byt en bild genom att ersätta filerna (samma namn) eller ändra sökvägarna i `index.html`.
-Bilden i kontaktsektionen kan ersättas av ett kontaktformulär när ett sådant finns.

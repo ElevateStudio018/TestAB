@@ -836,11 +836,6 @@ h3 {
   transform: scale(1.04);
 }
 
-.photo--on-primary::before {
-  border-color: var(--c-on-primary);
-  opacity: 0.35;
-}
-
 /* Mindre förskjutning på smala skärmar, så ramen inte hamnar utanför sidan. */
 @media (max-width: 639px) {
   .photo::before {
