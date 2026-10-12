@@ -470,75 +470,67 @@ a {
   mask-image: radial-gradient(ellipse at 70% 40%, #000 0%, transparent 75%);
 }
 
-.hero__art {
+/* Hero-bilden: bakom texten under en mörk ton på mobil, som en hög bildpanel till höger på bredare skärmar. */
+.hero__media {
   position: absolute;
-  z-index: -1;
-  right: -30%;
-  top: 8%;
-  width: 110vw;
-  max-width: 760px;
-  opacity: 0.22;
+  inset: 0;
+  z-index: -2;
+}
+
+.hero__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  animation: hero-zoom 1.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(12 26 51 / 0.72) 0%, rgb(20 40 75 / 0.82) 55%, rgb(12 26 51 / 0.95) 100%);
 }
 
 @media (min-width: 900px) {
-  .hero__art {
-    right: -2%;
-    top: 50%;
-    width: 52vw;
-    opacity: 0.9;
-    transform: translateY(-50%);
+  .hero__media {
+    inset: 0 0 0 auto;
+    width: 48%;
+    /* Bilden tonar ut mot vänster, så att den smälter in i bakgrunden utan synlig kant. */
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0 / 0.55) 22%, #000 48%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0 / 0.55) 22%, #000 48%);
+  }
+
+  /* Mörkare upptill (bakom menylänkarna) och nedtill (bakom faktaraden), plus en lätt blå ton. */
+  .hero__media::after {
+    background:
+      linear-gradient(180deg, rgb(12 26 51 / 0.7) 0%, rgb(12 26 51 / 0.15) 22%, transparent 45%, transparent 70%, rgb(12 26 51 / 0.65) 100%),
+      linear-gradient(0deg, rgb(20 40 75 / 0.2), rgb(20 40 75 / 0.2));
   }
 }
 
-.hero__lines path {
-  fill: none;
-  stroke: rgb(255 255 255 / 0.28);
-  stroke-width: 1.2;
-  stroke-dasharray: 1400;
-  stroke-dashoffset: 1400;
-  animation: hero-draw 2.4s cubic-bezier(0.33, 1, 0.68, 1) 0.4s forwards;
-}
-
-.hero__nodes circle {
-  fill: rgb(255 255 255 / 0.85);
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: hero-pulse 4s ease-in-out infinite;
-}
-
-.hero__nodes circle:nth-child(2n) {
-  animation-delay: 1.2s;
-}
-
-.hero__nodes circle:nth-child(3n) {
-  animation-delay: 2.1s;
-}
-
-.hero__nodes .hero__core {
-  fill: #fff;
-  filter: drop-shadow(0 0 12px rgb(120 170 255 / 0.9));
-}
-
-@keyframes hero-draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes hero-pulse {
-  0%, 100% {
-    opacity: 0.55;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.35);
+@keyframes hero-zoom {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
   }
 }
 
 .hero__inner {
   margin-block: auto;
   padding-block: 48px;
+}
+
+/* Texten håller sig till vänster om bildpanelen. */
+@media (min-width: 900px) {
+  .hero__inner > * {
+    max-width: min(620px, 50vw);
+  }
+
+  .hero__inner > .hero__title {
+    max-width: min(12em, 52vw);
+  }
 }
 
 .hero__title {
@@ -596,8 +588,7 @@ a {
 
 .hero__facts {
   border-top: 1px solid rgb(255 255 255 / 0.18);
-  background: rgb(12 26 51 / 0.35);
-  backdrop-filter: blur(6px);
+  background: rgb(12 26 51 / 0.55);
 }
 
 .hero__facts ul {
@@ -1204,7 +1195,4 @@ h3 {
     transition: none !important;
   }
 
-  .hero__lines path {
-    stroke-dashoffset: 0;
   }
-}

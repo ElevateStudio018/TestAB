@@ -79,20 +79,12 @@
 
     <!-- ===================== A. STARTSIDA ===================== -->
     <section class="hero" id="start" aria-labelledby="start-rubrik">
-      <!-- Dekorativ bakgrund: ett abstrakt nätverk av punkter och linjer. -->
-      <svg class="hero__art" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
-        <g class="hero__lines">
-          <path d="M120 140 L300 90 L470 180 L520 360 L390 500 L200 470 L90 330 Z" />
-          <path d="M300 90 L300 290 L470 180 M300 290 L520 360 M300 290 L390 500 M300 290 L200 470 M300 290 L90 330 M300 290 L120 140" />
-          <path d="M200 470 L390 500 M90 330 L200 470" />
-        </g>
-        <g class="hero__nodes">
-          <circle cx="120" cy="140" r="5" /><circle cx="300" cy="90" r="5" /><circle cx="470" cy="180" r="5" />
-          <circle cx="520" cy="360" r="5" /><circle cx="390" cy="500" r="5" /><circle cx="200" cy="470" r="5" />
-          <circle cx="90" cy="330" r="5" />
-          <circle class="hero__core" cx="300" cy="290" r="9" />
-        </g>
-      </svg>
+      <!-- Hero-bild: Uppsala domkyrka. Foto: Lost Wonderer, Pexels (fri licens, pexels.com/photo/29115825).
+           Byt bild genom att ersätta filerna i assets/img/ och uppdatera alt-texten. -->
+      <picture class="hero__media">
+        <source type="image/webp" srcset="assets/img/hero-uppsala-domkyrka-800.webp 800w, assets/img/hero-uppsala-domkyrka-1400.webp 1400w" sizes="(min-width: 900px) 46vw, 100vw">
+        <img src="assets/img/hero-uppsala-domkyrka-1400.jpg" srcset="assets/img/hero-uppsala-domkyrka-800.jpg 800w, assets/img/hero-uppsala-domkyrka-1400.jpg 1400w" sizes="(min-width: 900px) 46vw, 100vw" width="1400" height="1867" alt="Uppsala domkyrka sedd framifrån" fetchpriority="high">
+      </picture>
 
       <div class="container hero__inner">
         <p class="tag hero__rise" style="--d: 100ms">Aqnova AB · Uppsala</p>
