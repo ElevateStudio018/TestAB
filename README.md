@@ -11,7 +11,7 @@ formspråk är hämtade från Stenvallers webbplats.
 | `assets/css/styles.css` | Utseende. Färgerna ligger som variabler överst i filen (`:root`). |
 | `assets/js/main.js` | Mobilmenyn |
 | `assets/img/favicon.svg` | Ikon i webbläsarfliken |
-| `assets/img/hero-uppsala-domkyrka-*` | Hero-bilden i två storlekar (800 och 1400 px), som WebP och JPEG |
+| `assets/img/hero-kod-*` | Hero-bakgrunden: 1000 och 2000 px samt en stående mobilversion, som WebP och JPEG |
 
 Öppna `index.html` direkt i en webbläsare, eller publicera mappen på valfritt webbhotell
 (t.ex. GitHub Pages, Netlify). Inget byggsteg behövs.
@@ -52,10 +52,10 @@ Längst ned i `index.html` finns mallar i `<template>`-element. De visas aldrig 
 
 ## Bilder
 
-Hero-bilden föreställer Uppsala domkyrka och knyter an till bolagets säte. Den visar inte företagets
-lokaler eller personal.
+Hero-bakgrunden visar programkod på en datorskärm, som en stämningsbild för datakonsultverksamhet.
+Den är dekorativ och säger inget om vilka tekniker företaget arbetar med.
 
-- Foto: Lost Wonderer, [Pexels](https://www.pexels.com/photo/majestic-uppsala-cathedral-twin-towers-view-29115825/).
+- Foto: Nemuel Sereti, [Pexels](https://www.pexels.com/photo/programming-code-on-screen-6424584/).
   Pexels licens tillåter fri användning utan krav på namnangivelse.
-- Byt bild: ersätt filerna `hero-uppsala-domkyrka-*` (eller lägg till nya och ändra sökvägarna i
-  `<picture class="hero__media">` i `index.html`) och uppdatera alt-texten.
+- Byt bild: ersätt filerna `hero-kod-*` (eller ändra sökvägarna i `<picture class="hero__media">` i
+  `index.html`). Mobilversionen är ett stående utsnitt av samma bild.

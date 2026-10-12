@@ -470,7 +470,7 @@ a {
   mask-image: radial-gradient(ellipse at 70% 40%, #000 0%, transparent 75%);
 }
 
-/* Hero-bilden: bakom texten under en mörk ton på mobil, som en hög bildpanel till höger på bredare skärmar. */
+/* Hero-bakgrunden: en bild över hela ytan under en marinblå ton som är tätast till vänster, där texten står. */
 .hero__media {
   position: absolute;
   inset: 0;
@@ -482,31 +482,24 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 30%;
-  animation: hero-zoom 1.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  object-position: 70% 50%;
+  animation: hero-zoom 1.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .hero__media::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgb(12 26 51 / 0.72) 0%, rgb(20 40 75 / 0.82) 55%, rgb(12 26 51 / 0.95) 100%);
+  background:
+    linear-gradient(180deg, rgb(12 26 51 / 0.55) 0%, rgb(12 26 51 / 0.2) 30%, rgb(12 26 51 / 0.2) 60%, rgb(12 26 51 / 0.85) 100%),
+    linear-gradient(0deg, rgb(20 40 75 / 0.72), rgb(20 40 75 / 0.72));
 }
 
 @media (min-width: 900px) {
-  .hero__media {
-    inset: 0 0 0 auto;
-    width: 48%;
-    /* Bilden tonar ut mot vänster, så att den smälter in i bakgrunden utan synlig kant. */
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0 / 0.55) 22%, #000 48%);
-    mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0 / 0.55) 22%, #000 48%);
-  }
-
-  /* Mörkare upptill (bakom menylänkarna) och nedtill (bakom faktaraden), plus en lätt blå ton. */
   .hero__media::after {
     background:
-      linear-gradient(180deg, rgb(12 26 51 / 0.7) 0%, rgb(12 26 51 / 0.15) 22%, transparent 45%, transparent 70%, rgb(12 26 51 / 0.65) 100%),
-      linear-gradient(0deg, rgb(20 40 75 / 0.2), rgb(20 40 75 / 0.2));
+      linear-gradient(90deg, rgb(12 26 51 / 0.96) 0%, rgb(20 40 75 / 0.9) 42%, rgb(20 40 75 / 0.5) 66%, rgb(20 40 75 / 0.25) 100%),
+      linear-gradient(180deg, rgb(12 26 51 / 0.5) 0%, transparent 22%, transparent 70%, rgb(12 26 51 / 0.6) 100%);
   }
 }
 
@@ -525,7 +518,7 @@ a {
 /* Texten håller sig till vänster om bildpanelen. */
 @media (min-width: 900px) {
   .hero__inner > * {
-    max-width: min(620px, 50vw);
+    max-width: min(560px, 46vw);
   }
 
   .hero__inner > .hero__title {
@@ -565,7 +558,7 @@ a {
 }
 
 .hero__lead {
-  max-width: 620px;
+  max-width: 560px;
   margin-top: 28px;
   color: rgb(255 255 255 / 0.88);
 }

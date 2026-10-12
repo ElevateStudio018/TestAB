@@ -79,11 +79,14 @@
 
     <!-- ===================== A. STARTSIDA ===================== -->
     <section class="hero" id="start" aria-labelledby="start-rubrik">
-      <!-- Hero-bild: Uppsala domkyrka. Foto: Lost Wonderer, Pexels (fri licens, pexels.com/photo/29115825).
-           Byt bild genom att ersätta filerna i assets/img/ och uppdatera alt-texten. -->
+      <!-- Hero-bakgrund: programkod på en skärm, som stämningsbild för datakonsultverksamhet.
+           Foto: Nemuel Sereti, Pexels (fri licens, pexels.com/photo/6424584).
+           Byt bild genom att ersätta filerna hero-kod-* i assets/img/. -->
       <picture class="hero__media">
-        <source type="image/webp" srcset="assets/img/hero-uppsala-domkyrka-800.webp 800w, assets/img/hero-uppsala-domkyrka-1400.webp 1400w" sizes="(min-width: 900px) 46vw, 100vw">
-        <img src="assets/img/hero-uppsala-domkyrka-1400.jpg" srcset="assets/img/hero-uppsala-domkyrka-800.jpg 800w, assets/img/hero-uppsala-domkyrka-1400.jpg 1400w" sizes="(min-width: 900px) 46vw, 100vw" width="1400" height="1867" alt="Uppsala domkyrka sedd framifrån" fetchpriority="high">
+        <source media="(max-width: 699px)" type="image/webp" srcset="assets/img/hero-kod-mobil.webp">
+        <source media="(max-width: 699px)" srcset="assets/img/hero-kod-mobil.jpg">
+        <source type="image/webp" srcset="assets/img/hero-kod-1000.webp 1000w, assets/img/hero-kod-2000.webp 2000w" sizes="100vw">
+        <img src="assets/img/hero-kod-2000.jpg" srcset="assets/img/hero-kod-1000.jpg 1000w, assets/img/hero-kod-2000.jpg 2000w" sizes="100vw" width="2000" height="1333" alt="" fetchpriority="high">
       </picture>
 
       <div class="container hero__inner">
