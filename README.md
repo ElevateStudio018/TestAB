@@ -10,7 +10,8 @@ formspråk är hämtade från Stenvallers webbplats.
 | `index.html` | All text och alla sektioner |
 | `assets/css/styles.css` | Utseende. Färgerna ligger som variabler överst i filen (`:root`). |
 | `assets/js/main.js` | Mobilmenyn |
-| `assets/img/favicon.svg` | Ikon i webbläsarfliken |
+| `assets/img/logo.png` | Logotypen (i sidhuvudet och sidfoten) |
+| `assets/img/favicon-32.png`, `favicon-180.png` | Ikon i webbläsarfliken och för hemskärmen |
 | `assets/img/hero-kod-*` | Hero-bakgrunden: 1000 och 2000 px samt en stående mobilversion, som WebP och JPEG |
 
 Öppna `index.html` direkt i en webbläsare, eller publicera mappen på valfritt webbhotell
